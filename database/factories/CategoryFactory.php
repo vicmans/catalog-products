@@ -17,9 +17,9 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $name = fake()->unique()->word();
+        $name = ucfirst(fake()->unique()->word());
         return [
-            'name' => fake()->unique()->word(),
+            'name' => $name,
             'description' => fake()->sentence(),
             'slug' => Str::slug($name),
         ];

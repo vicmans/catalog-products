@@ -1,6 +1,6 @@
 # Product Catalog with Newsletter Subscription
 
-This project is a Laravel application that serves as a product catalog. Users can browse products and categories, subscribe to a newsletter, and receive updates about featured products.
+This project is a Laravel application that serves as a product catalog. Provide an API to browse products and categories, subscribe to a newsletter, and receive updates about featured products.
 
 ## Features
 
@@ -10,6 +10,7 @@ This project is a Laravel application that serves as a product catalog. Users ca
 - Subscribe and unsubscribe to newsletters
 - Receive a welcome email upon subscription
 - Weekly newsletter with featured products
+- Admin panel to manage products and categories
 
 ## Requirements
 
@@ -71,6 +72,8 @@ php artisan serve
 
 You can now access the application at `http://localhost:8000`.
 
+To send newsletters weekly, set up a cron job to run the Laravel scheduler or run the queue worker:
+
 ## API Endpoints
 
 ### Categories
@@ -86,7 +89,12 @@ You can now access the application at `http://localhost:8000`.
 ### Subscribers
 
 - **Subscribe**: `POST /api/subscribe` (requires an email)
-- **Unsubscribe**: `DELETE /api/unsubscribe` (requires an email)
+- **Unsubscribe**: `POST /api/unsubscribe` (requires an email)
+
+## Admin panel
+
+You can access to the admin panel `/admin`
+
 
 ## Technologies Used
 
